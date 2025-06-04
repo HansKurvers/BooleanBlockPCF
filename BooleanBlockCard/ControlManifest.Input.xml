@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="BooleanBlock" constructor="BooleanBlockCard" version="1.0.0" display-name-key="BooleanBlockCard" description-key="Card with boolean switch and conditional text field" control-type="standard">
+    <property name="booleanValue" display-name-key="Boolean Value" description-key="Boolean value to control text field" of-type="TwoOptions" usage="bound" required="true" />
+    <property name="textValue" display-name-key="Text Value" description-key="Multiline text value" of-type="Multiple" usage="bound" required="true" />
+    <property name="defaultText" display-name-key="Default Text" description-key="Default text when boolean is false" of-type="Multiple" usage="input" required="false" default-value="Enter your text here..." />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/BooleanBlockCard.css" order="1" />
+    </resources>
+  </control>
+</manifest>

@@ -1,0 +1,98 @@
+.boolean-block-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.switch-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.switch-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch-label {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.switch-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+    border-radius: 24px;
+}
+
+.switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+.switch-input:checked + .switch-label .switch-slider {
+    background-color: #0078d4;
+}
+
+.switch-input:checked + .switch-label .switch-slider:before {
+    transform: translateX(24px);
+}
+
+.switch-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #323130;
+}
+
+.text-area {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.5;
+    resize: vertical;
+    box-sizing: border-box;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.text-area:focus {
+    outline: none;
+    border-color: #0078d4;
+}
+
+.text-area.disabled {
+    background-color: #f3f2f1;
+    color: #a19f9d;
+    cursor: not-allowed;
+}
+
+.text-area:not(.disabled):hover {
+    border-color: #a0a0a0;
+}
