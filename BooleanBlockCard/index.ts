@@ -22,12 +22,19 @@ export class BooleanBlockCard implements ComponentFramework.StandardControl<IInp
         this._notifyOutputChanged = notifyOutputChanged;
         this._container = container;
         
-        this._booleanValue = context.parameters.booleanValue.raw || false;
-        this._textValue = context.parameters.textValue.raw || "";
-        this._defaultText = context.parameters.defaultText.raw || "Enter your text here...";
+        // Add debugging
+        console.log("BooleanBlockCard init called", context.parameters);
+        
+        this._booleanValue = context.parameters.booleanValue?.raw ?? false;
+        this._textValue = context.parameters.textValue?.raw ?? "";
+        this._defaultText = context.parameters.defaultText?.raw ?? "Enter your text here...";
+        
+        console.log("Initial values:", { boolean: this._booleanValue, text: this._textValue, default: this._defaultText });
         
         this.createCardUI();
         this.updateTextFieldState();
+        
+        console.log("Component initialized, container:", this._container);
     }
 
     private createCardUI(): void {
