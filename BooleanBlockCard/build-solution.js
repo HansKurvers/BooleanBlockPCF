@@ -40,9 +40,14 @@ const solutionSrcPath = path.join(__dirname, 'Solutions', 'BooleanBlockCardSolut
 archive.directory(solutionSrcPath, false);
 
 // Add control output
-const controlOutputPath = path.join(__dirname, 'out', 'controls', 'BooleanBlock.BooleanBlockCard');
+const controlOutputPath = path.join(__dirname, 'out', 'controls');
 if (fs.existsSync(controlOutputPath)) {
     archive.directory(controlOutputPath, 'Controls/new_booleanblockcardcontrol');
 }
+
+// Add relationships.xml (required for PCF solutions)
+const relationshipsContent = `<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />`;
+archive.append(relationshipsContent, { name: 'Other/Relationships.xml' });
 
 archive.finalize();
