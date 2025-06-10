@@ -24,7 +24,7 @@ fs.writeFileSync(path.join(tempDir, '[Content_Types].xml'), contentTypes);
 
 // Create solution.xml
 const solutionXml = `<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.1.0.643" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.0.0" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>${solutionName}</UniqueName>
     <LocalizedNames>
@@ -43,38 +43,38 @@ const solutionXml = `<?xml version="1.0" encoding="utf-8"?>
       <Descriptions>
         <Description description="${publisherName} Publisher" languagecode="1033" />
       </Descriptions>
-      <EMailAddress />
-      <SupportingWebsiteUrl />
+      <EMailAddress></EMailAddress>
+      <SupportingWebsiteUrl></SupportingWebsiteUrl>
       <CustomizationPrefix>${publisherPrefix}</CustomizationPrefix>
       <CustomizationOptionValuePrefix>10000</CustomizationOptionValuePrefix>
       <Addresses>
         <Address>
           <AddressNumber>1</AddressNumber>
           <AddressTypeCode>1</AddressTypeCode>
-          <City />
-          <County />
-          <Country />
-          <Fax />
+          <City></City>
+          <County></County>
+          <Country></Country>
+          <Fax></Fax>
           <FreightTermsCode>1</FreightTermsCode>
-          <ImportSequenceNumber />
-          <Latitude />
-          <Line1 />
-          <Line2 />
-          <Line3 />
-          <Longitude />
-          <Name />
-          <PostalCode />
-          <PostOfficeBox />
-          <PrimaryContactName />
+          <ImportSequenceNumber></ImportSequenceNumber>
+          <Latitude></Latitude>
+          <Line1></Line1>
+          <Line2></Line2>
+          <Line3></Line3>
+          <Longitude></Longitude>
+          <Name></Name>
+          <PostalCode></PostalCode>
+          <PostOfficeBox></PostOfficeBox>
+          <PrimaryContactName></PrimaryContactName>
           <ShippingMethodCode>1</ShippingMethodCode>
-          <StateOrProvince />
-          <Telephone1 />
-          <Telephone2 />
-          <Telephone3 />
-          <TimeZoneRuleVersionNumber />
-          <UPSZone />
-          <UTCOffset />
-          <UTCConversionTimeZoneCode />
+          <StateOrProvince></StateOrProvince>
+          <Telephone1></Telephone1>
+          <Telephone2></Telephone2>
+          <Telephone3></Telephone3>
+          <TimeZoneRuleVersionNumber></TimeZoneRuleVersionNumber>
+          <UPSZone></UPSZone>
+          <UTCOffset></UTCOffset>
+          <UTCConversionTimeZoneCode></UTCConversionTimeZoneCode>
         </Address>
       </Addresses>
     </Publisher>
@@ -96,27 +96,7 @@ const customizationsXml = `<?xml version="1.0" encoding="utf-8"?>
   <EntityRelationships />
   <OrganizationSettings />
   <optionsets />
-  <CustomControls>
-    <CustomControl>
-      <Name>${controlName}</Name>
-      <Version>1.0.0</Version>
-      <CompatibleDataTypes>
-        <CompatibleDataType>TwoOptions</CompatibleDataType>
-        <CompatibleDataType>SingleLine.Text</CompatibleDataType>
-        <CompatibleDataType>Multiple</CompatibleDataType>
-      </CompatibleDataTypes>
-      <Resources>
-        <Resource>
-          <Name>bundle.js</Name>
-          <Type>JavaScript</Type>
-        </Resource>
-        <Resource>
-          <Name>css/BooleanBlockCard.css</Name>
-          <Type>CSS</Type>
-        </Resource>
-      </Resources>
-    </CustomControl>
-  </CustomControls>
+  <CustomControls />
   <SolutionPluginAssemblies />
   <EntityDataProviders />
 </ImportExportXml>`;
